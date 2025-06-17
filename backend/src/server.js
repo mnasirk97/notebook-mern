@@ -8,14 +8,12 @@ import rateLimiter from './middlewares/rateLimiter.js';
 
 dotenv.config(); // Load environment variables from .env file
  
-
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// middleware
+//==> middleware 
 app.use(express.json());
 app.use(rateLimiter)
-
 
 // ==> test middleware
 // app.use((req, res, next) => {
