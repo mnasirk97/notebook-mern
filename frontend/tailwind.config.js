@@ -12,6 +12,5 @@ export default {
   plugins: [daisyui],
   daisyui: {
     themes: ["forest"]
-    // themes: ["light", "dark", "cupcake", "forest", "synthwave", "retro", "cyberpunk", "valentine", "halloween", "garden", "lofi", "dracula", "cmyk", "business", "acid", "lemonade", "night"],
   },
 }
