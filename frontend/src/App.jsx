@@ -11,13 +11,14 @@ function App() {
         <h1 className="text-3xl font-bold underline">
       Hello world!
     </h1>
-      <button onClick={()=> toast.success("Congrates")}>click me</button>
+    {/* Example of Toast */}
+      {/* <button onClick={()=> toast.success("Congrates")}>click me</button>
+      <button onClick={()=> toast.error("Something went wrong")}>click me</button> */}
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/create" element={<CreatePage />} />
         <Route path="/note/:id" element={<NoteDetailPage />} />
       </Routes>
-      <button onClick={()=> toast.error("Something went wrong")}>click me</button>
     </div>
   )
 }
