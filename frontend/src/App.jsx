@@ -8,9 +8,15 @@ import NoteDetailPage from './pages/NoteDetailPage'
 function App() {
   return (
     <div data-theme="forest">
-        <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
+      {/* Example of tailwind */}
+        {/* <h1 className="text-3xl font-bold underline">Hello world!</h1> */}
+      {/* Example of react-hot-toast */}
+      {/* <div className="toast toast-top toast-center">
+        <div className="alert alert-success">
+          <div>
+            <span>Success</span>
+          </div>
+        </div> */}
     {/* Example of Toast */}
       {/* <button onClick={()=> toast.success("Congrates")}>click me</button>
       <button onClick={()=> toast.error("Something went wrong")}>click me</button> */}
