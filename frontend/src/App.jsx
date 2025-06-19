@@ -20,13 +20,6 @@ function App() {
         {/* <h1 className="text-3xl font-bold underline">Hello world!</h1> */}
 
 
-      {/* Example of react-hot-toast */}
-      {/* <div className="toast toast-top toast-center">
-        <div className="alert alert-success">
-          <div>
-            <span>Success</span>
-          </div>
-        </div> */}
 
 
    
@@ -36,6 +29,16 @@ function App() {
 
 export default App
 
+
+
+
+      {/* Example of react-hot-toast */}
+      {/* <div className="toast toast-top toast-center">
+        <div className="alert alert-success">
+          <div>
+            <span>Success</span>
+          </div>
+        </div> */}
 
  {/* Example of Toast */}
       {/* <button onClick={()=> toast.success("Congrates")}>click me</button>
