@@ -29,11 +29,14 @@ function App() {
         </div> */}
 
 
-    {/* Example of Toast */}
-      {/* <button onClick={()=> toast.success("Congrates")}>click me</button>
-      <button onClick={()=> toast.error("Something went wrong")}>click me</button> */}
+   
     </div>
   )
 }
 
 export default App
+
+
+ {/* Example of Toast */}
+      {/* <button onClick={()=> toast.success("Congrates")}>click me</button>
+      <button onClick={()=> toast.error("Something went wrong")}>click me</button> */}
