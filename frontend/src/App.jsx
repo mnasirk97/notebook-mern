@@ -14,6 +14,8 @@ function App() {
       <Route path="/note/:id" element={<NoteDetailPage />} />
     </Routes>
 
+    {/* 2:03 */}
+
       {/* Example of tailwind */}
         {/* <h1 className="text-3xl font-bold underline">Hello world!</h1> */}
 
@@ -26,7 +28,7 @@ function App() {
           </div>
         </div> */}
 
-        
+
     {/* Example of Toast */}
       {/* <button onClick={()=> toast.success("Congrates")}>click me</button>
       <button onClick={()=> toast.error("Something went wrong")}>click me</button> */}
