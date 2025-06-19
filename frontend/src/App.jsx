@@ -14,7 +14,7 @@ function App() {
       <Route path="/note/:id" element={<NoteDetailPage />} />
     </Routes>
 
-    {/* 2:03 */}
+   
 
       {/* Example of tailwind */}
         {/* <h1 className="text-3xl font-bold underline">Hello world!</h1> */}
