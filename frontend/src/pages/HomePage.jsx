@@ -3,7 +3,7 @@ import Navbar from '../components/Navbar'
 
 function HomePage() {
   return (
-    <div>
+    <div className='min-h-screen'>
       <Navbar />
     </div>
   )
