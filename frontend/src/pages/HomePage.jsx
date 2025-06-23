@@ -19,6 +19,7 @@ function HomePage() {
         console.error('Failed to fetch notes:', error)
       }
     }
+    fetchNotes()
   }, [])
 
   // ===> Testing
