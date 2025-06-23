@@ -1,3 +1,5 @@
+import { Link } from "react-router"
+import { PlusIcon } from "lucide-react"
 
 
 function Navbar() {
@@ -8,6 +10,13 @@ function Navbar() {
             <h1 className='text-3xl font-bold text-primary font-mono tracking-tight'>
                 NasirPaid
             </h1>
+            <div className="flex items-center gap-4">
+          <Link to={"/create"} className="btn btn-primary">
+            <PlusIcon className="size-5" />
+            <span>Create Note</span>
+            {/* <span className="hidden md:inline">Create Note</span> */}
+          </Link>
+            </div>
         </div>
       </div>
     </header>
