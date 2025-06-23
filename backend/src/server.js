@@ -15,7 +15,10 @@ const PORT = process.env.PORT || 3000;
 //==> middleware 
 app.use(express.json());
 app.use(rateLimiter)
-app.use(cors()); // Enable CORS for all routes
+// app.use(cors()); // Enable CORS for all routes
+app.use(cors({
+  origin: 'http://localhost:5173', // Allow requests from this origin
+}));
 
 // ==> test middleware
 // app.use((req, res, next) => {
