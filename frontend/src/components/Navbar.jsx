@@ -13,8 +13,8 @@ function Navbar() {
             <div className="flex items-center gap-4">
           <Link to={"/create"} className="btn btn-primary">
             <PlusIcon className="size-5" />
-            {/* <span>Create Note</span> */}
-            <span className="hidden md:inline">Create Note</span>
+            <span>Create Note</span>
+            {/* <span className="hidden md:inline">Create Note</span> */}
           </Link>
             </div>
         </div>
