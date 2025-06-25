@@ -22,6 +22,8 @@ function HomePage() {
     fetchNotes()
   }, [])
 
+  // 2:17
+
   // ===> Testing
   // useEffect(() => {
   //   const fetchNotes = async () => {
