@@ -22,7 +22,7 @@ function HomePage() {
     fetchNotes()
   }, [])
 
-
+  // 2:18
 
   // ===> Testing
   // useEffect(() => {
