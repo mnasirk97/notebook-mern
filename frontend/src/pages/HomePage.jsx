@@ -15,14 +15,19 @@ function HomePage() {
         // const data = await res.json()
         const res = await axios.get('http://localhost:5000/api/notes')
         console.log("Date =>", res.data)
+        setNotes(res.data)
+        setIsRateLimited(false)
       } catch (error) {
-        console.error('Failed to fetch notes:', error)
+        console.log('Failed to fetch notes:', error)
+        // console.error('Failed to fetch notes:', error)
+      
+
       }
     }
     fetchNotes()
   }, [])
 
-
+  // 2:
 
   // ===> Testing
   // useEffect(() => {
