@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import Navbar from '../components/Navbar'
 import RateLimitedUI from '../components/RateLimitedUI'
 import axios from 'axios'
+import  toast  from 'react-hot-toast'
 
 function HomePage() {
   const [isRateLimited, setIsRateLimited] = useState(false)
@@ -20,7 +21,12 @@ function HomePage() {
       } catch (error) {
         console.log('Failed to fetch notes:', error)
         // console.error('Failed to fetch notes:', error)
-      
+        if(error.response && error.response.status === 429) {
+          // If the error is a rate limit error, set the rate limit state
+          setIsRateLimited(true)
+        }else{
+          toast.error('Failed to fetch notes. Please try again later.')
+        }
 
       }
     }
