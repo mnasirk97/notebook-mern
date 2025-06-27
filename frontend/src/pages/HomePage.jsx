@@ -35,7 +35,7 @@ function HomePage() {
     fetchNotes()
   }, [])
 
-  // 2
+  // 
 
   // ===> Testing
   // useEffect(() => {
