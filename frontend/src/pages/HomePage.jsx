@@ -20,8 +20,6 @@ function HomePage() {
         setIsRateLimited(false)
       } catch (error) {
         // console.log('Failed to fetch notes:', error)
-        // console.log('Error Response:', error.response)
-        
         // if(error.response && error.response.status === 429) {
         if(error.response?.status === 429) {
           // If the error is a rate limit error, set the rate limit state
