@@ -68,19 +68,7 @@ function HomePage() {
       <Navbar />
 
       {isRateLimited && <RateLimitedUI />}
-      {console.log("notes", notes)}
-      {/* {console.log("notes Data", notes.data)} */}
-      
-      {console.log("Notes Data", data)}
-
-      
-      {/* {console.log("Notes Content", notes.data.content)} */}
-      {/* {notes.map((note) =>{
-        console.log("note", note)
-      }
-    )
-
-        } */}
+      {console.log("notes", notes.data)}
       <div className="max-w-7xl mx-auto p-4 mt-6">
         {loading && <div className="text-center text-primary py-10">Loading notes...</div>}
 
