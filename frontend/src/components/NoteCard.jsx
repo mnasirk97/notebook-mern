@@ -11,4 +11,4 @@ function NoteCard() {
 export default NoteCard
 
 
-// 2:25:
+// 2:25
