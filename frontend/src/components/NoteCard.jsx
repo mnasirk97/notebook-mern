@@ -1,4 +1,4 @@
-import { PenSquareIcon } from 'lucide-react'
+import { PenSquareIcon, Trash2Icon } from 'lucide-react'
 import React from 'react'
 import { Link } from 'react-router'
 
@@ -30,5 +30,3 @@ function NoteCard({ note }) {
 
 export default NoteCard
 
-
-// 
