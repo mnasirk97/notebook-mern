@@ -31,3 +31,6 @@ function NoteCard({ note }) {
 
 export default NoteCard
 
+
+
+// ==>
