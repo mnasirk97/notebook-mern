@@ -1,24 +1,20 @@
-import { useState } from "react"
+import { useState } from "react";
 
 function CreatePage() {
-  const [title, setTitle] = useState('')
-  const [content, setContent] = useState('')
-  const [loading, setLoading] = useState(false)
+  const [title, setTitle] = useState("");
+  const [content, setContent] = useState("");
+  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = () => {
-
-  }
+  const handleSubmit = () => {};
   return (
     <div className="min-h-screen bg-base-200">
       <div className="container mx-auto px-4 py-8">
-         <div>
-
-         </div>
-
+        <div>
+          
+        </div>
       </div>
-   
     </div>
-  )
+  );
 }
 
-export default CreatePage
+export default CreatePage;
