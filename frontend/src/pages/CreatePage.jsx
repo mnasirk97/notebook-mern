@@ -2,6 +2,7 @@ import { ArrowLeftIcon } from "lucide-react";
 import { useState } from "react";
 // import { Link } from "react-dom";
 import { Link } from "react-router-dom";
+import { toast } from "react-hot-toast";
 
 
 function CreatePage() {
@@ -11,8 +12,13 @@ function CreatePage() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Title:", title);
-    console.log("Content:", content);
+   if (!title.trim() || !content.trim()) {
+      toast.error("Title and content are required.");
+      return;
+    }
+    setLoading(true);
+    {/* 2:40:00 */}
+
   };
   return (
     <div className="min-h-screen bg-base-200">
