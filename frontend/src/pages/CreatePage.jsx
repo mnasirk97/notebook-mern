@@ -1,6 +1,7 @@
 import { ArrowLeftIcon } from "lucide-react";
 import { useState } from "react";
-import { Link } from "react-dom";
+// import { Link } from "react-dom";
+import { Link } from "react-router-dom";
 
 
 function CreatePage() {
@@ -8,7 +9,11 @@ function CreatePage() {
   const [content, setContent] = useState("");
   const [loading, setLoading] = useState(false);
 
-  const handleSubmit = () => {};
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("Title:", title);
+    console.log("Content:", content);
+  };
   return (
     <div className="min-h-screen bg-base-200">
       <div className="container mx-auto px-4 py-8">
@@ -49,10 +54,10 @@ function CreatePage() {
                     type="submit"
                     className="btn btn-primary"
                     disabled={loading}
-                    // onClick={() => {
-                    //   setLoading(true);
-                    //   handleSubmit();
-                    // }}
+                    onClick={() => {
+                      // setLoading(true);
+                      handleSubmit();
+                    }}
                   >
                     {loading ? "Creating..." : "Create Note"}
                   </button> 
