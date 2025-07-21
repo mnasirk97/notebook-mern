@@ -17,7 +17,7 @@ function CreatePage() {
       return;
     }
     setLoading(true);
-    // watch
+    // watch lecture
     {/* 2:40:00 */}
 
   };
