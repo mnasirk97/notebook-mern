@@ -16,7 +16,7 @@ function CreatePage() {
       return;
     }
     setLoading(true);
-    // watch lectur
+    // watch lectu
     {/* 2:40:00 */}
 
   };
