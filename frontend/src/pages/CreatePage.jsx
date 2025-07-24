@@ -16,7 +16,7 @@ function CreatePage() {
       return;
     }
     setLoading(true);
-    // watch lect
+    // watch lec
     {/* 2:40:00 */}
 
   };
