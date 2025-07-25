@@ -11,6 +11,7 @@ function CreatePage() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    
    if (!title.trim() || !content.trim()) {
       toast.error("Title and content are required.");
       return;
