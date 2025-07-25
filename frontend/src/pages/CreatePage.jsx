@@ -16,7 +16,7 @@ function CreatePage() {
       return;
     }
     setLoading(true);
-    // wat
+    // wa
     {/* 2:40:00 */}
 
   };
