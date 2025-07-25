@@ -9,7 +9,7 @@ function CreatePage() {
   const [content, setContent] = useState("");
   const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
    if (!title.trim() || !content.trim()) {
@@ -18,7 +18,11 @@ function CreatePage() {
     }
     setLoading(true);
     try {
-      
+      await axios.post("http://localhost:5000/api/notes", {
+        title,
+        content,
+      });
+      toast.success("Note created successfully!");
     } catch (error) {
       
     }finally {
