@@ -9,6 +9,8 @@ function CreatePage() {
   const [content, setContent] = useState("");
   const [loading, setLoading] = useState(false);
 
+  const navigate = useNavigate();
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -23,8 +25,10 @@ function CreatePage() {
         content,
       });
       toast.success("Note created successfully!");
+      navigate("/");
     } catch (error) {
-      
+      console.log("Error creating note:", error);
+      toast.error("Failed to create note.");
     }finally {
       setLoading(false);
     }
