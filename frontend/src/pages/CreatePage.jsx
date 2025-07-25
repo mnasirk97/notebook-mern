@@ -17,7 +17,13 @@ function CreatePage() {
       return;
     }
     setLoading(true);
-
+    try {
+      
+    } catch (error) {
+      
+    }finally {
+      setLoading(false);
+    }
     
 
   };
