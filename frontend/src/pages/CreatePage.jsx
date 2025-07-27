@@ -30,7 +30,10 @@ function CreatePage() {
       navigate("/");
     } catch (error) {
       console.log("Error creating note:", error);
-      toast.error("Failed to create note.");
+      // toast.error("Failed to create note.");
+      if(error.response.status === 429) {
+        toast.error("Too many requests. Please try again later.");
+      }
     }finally {
       setLoading(false);
     }
