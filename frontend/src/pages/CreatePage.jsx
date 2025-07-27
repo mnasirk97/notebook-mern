@@ -12,8 +12,9 @@ function CreatePage() {
 
   const navigate = useNavigate();
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  const handleSubmit = async (event) => {
+    console.log("Event:", event);
+    event.preventDefault();
 
    if (!title.trim() || !content.trim()) {
       toast.error("Title and content are required.");
