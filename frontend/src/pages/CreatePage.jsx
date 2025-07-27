@@ -32,8 +32,22 @@ function CreatePage() {
       console.log("Error creating note:", error);
       // toast.error("Failed to create note.");
       if(error.response.status === 429) {
-        toast.error("Too many requests. Please try again later.");
+        toast.error("Slow down! You are creating notes too quickly. Please wait a moment before trying again.", {
+          duration: 5000,
+          icon: "🚨",
+        });
       }
+      // if(error.response.status === 429) {
+      //   // toast.error("Too many requests. Please try again later.");
+      //   toast.error("Slow down! You are creating notes too quickly. Please wait a moment before trying again.", {
+      //     duration: 5000,
+      //     position: "top-center",
+      //     style: {
+      //       background: "#f87171", // Tailwind red-400
+      //       color: "#fff",
+      //     },
+      //   });
+      // }
     }finally {
       setLoading(false);
     }
