@@ -36,6 +36,11 @@ function CreatePage() {
           duration: 5000,
           icon: "🚨",
         });
+      }else{
+        toast.error("Failed to create note. Please try again later.", {
+          duration: 5000,
+          icon: "⚠️",
+        });
       }
       // if(error.response.status === 429) {
       //   // toast.error("Too many requests. Please try again later.");
