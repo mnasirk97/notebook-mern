@@ -8,9 +8,7 @@ function NoteCard({ note }) {
   const handleDelete = (e, id) => {
      e.preventDefault() // Get rid of the navigation behavior
 
-      if (window.confirm('Are you sure you want to delete this note?')) {
-        // Call the delete function from props or context
-      }
+      if (window.confirm('Are you sure you want to delete this note?')) return;
   }
   return (
     <Link to={`/note/${note._id}`} className="card bg-base-100 hover:shadow-lg transition-all duration-200 
