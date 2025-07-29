@@ -5,7 +5,7 @@ import { formatDate } from '../lib/utils'
 
 function NoteCard({ note }) {
 
-  const handleDelete = () => {
+  const handleDelete = (e) => {
     
   }
   return (
