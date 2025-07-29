@@ -6,7 +6,7 @@ import { formatDate } from '../lib/utils'
 function NoteCard({ note }) {
 
   const handleDelete = (e, id) => {
-    e.preventDefault()
+     e.preventDefault() // Get rid of the navigation behavior
   }
   return (
     <Link to={`/note/${note._id}`} className="card bg-base-100 hover:shadow-lg transition-all duration-200 
