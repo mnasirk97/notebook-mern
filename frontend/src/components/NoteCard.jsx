@@ -11,7 +11,7 @@ function NoteCard({ note }) {
       if (window.confirm('Are you sure you want to delete this note?')) return;
 
       try {
-        // {/* 2:5  */}
+        // {/* 2:52  */}
       } catch (error) {
         
       }
