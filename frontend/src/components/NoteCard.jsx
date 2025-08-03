@@ -3,17 +3,20 @@ import React from 'react'
 import { Link } from 'react-router'
 import { formatDate } from '../lib/utils'
 import api from '../lib/axios'
-import { toast } from 'react-hot-toast'
+import  toast  from 'react-hot-toast'
 
-function NoteCard({ note }) {
+function NoteCard({ note, setNotes }) {
   const handleDelete = async (e, id) => {
      e.preventDefault() // Get rid of the navigation behavior
 
-      if (window.confirm('Are you sure you want to delete this note?')) return;
+      if (!window.confirm('Are you sure you want to delete this note?')) return;
 
       try {
          await api.delete(`/notes/${id}`)
-        toast.success('Note deleted successfully')
+         toast.success('Note deleted successfully')
+          setNotes((prevNotes) => prevNotes.filter((note) => note._id !== id))
+          // console.log("Note in NoteCard deleted Section =>", setNotes)
+          // console.log("Note in NoteCard deleted Section =>", prevNotes)
       } catch (error) {
         console.log("Error deleting note:", error)
         toast.error('Failed to delete note')
