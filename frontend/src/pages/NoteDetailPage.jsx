@@ -32,7 +32,20 @@ const NoteDetailPage = () => {
   }, [id])
 
   // console.log("Note =>", {note})
-  const handleDelete = async () => {}
+  const handleDelete = async () => {
+    if(!window.confirm("Are you sure you want to delete this note?")) return;
+
+    try {
+      await api.delete(`/notes/${id}`)
+      toast.success('Note deleted successfully.')
+      navigate('/')
+    } catch (error) {
+      toast.error('Failed to delete note. Please try again later.')
+      console.error("Error deleting note:", error)
+    }
+  }
+  const handleSave = async () => {}
+
 
   if (loading) {
     return (
@@ -73,6 +86,7 @@ const NoteDetailPage = () => {
                 // disabled={saving}
               />
             </div>
+
              <div className='form-control mb-4'>
               <label className="label">
                 <span className='label-text'>Content</span>
@@ -84,6 +98,12 @@ const NoteDetailPage = () => {
                 onChange={(e) => setNote({ ...note, content: e.target.value })}
                 // disabled={saving}
               />
+            </div>
+
+            <div className="card-actions justify-end">
+              <button className="btn btn-primary" disabled={saving} onClick={handleSave}>
+                {saving ? "Saving..." : "Save Changes"}
+              </button>
             </div>
           </div>
         </div>
