@@ -43,7 +43,7 @@ const NoteDetailPage = () => {
 
 
   return (
-    <div>
+    <div className='min-h-screen bg-base-200'>
       
     </div>
   )
