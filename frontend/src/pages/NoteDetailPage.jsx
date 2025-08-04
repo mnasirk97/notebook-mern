@@ -73,6 +73,18 @@ const NoteDetailPage = () => {
                 // disabled={saving}
               />
             </div>
+             <div className='form-control mb-4'>
+              <label className="label">
+                <span className='label-text'>Content</span>
+              </label>
+              <textarea
+                placeholder='Note Content'
+                className="textarea textarea-bordered h-32"
+                value={note?.content || ''}
+                onChange={(e) => setNote({ ...note, content: e.target.value })}
+                // disabled={saving}
+              />
+            </div>
           </div>
         </div>
         </div>
