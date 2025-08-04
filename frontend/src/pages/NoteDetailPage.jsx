@@ -64,9 +64,15 @@ const NoteDetailPage = () => {
               <label className="label">
                 <span className='label-text'>Title</span>
               </label>
-
+              <input
+                type="text"
+                placeholder='Note Title'
+                className="input input-bordered"
+                value={note?.title || ''}
+                onChange={(e) => setNote({ ...note, title: e.target.value })}
+                // disabled={saving}
+              />
             </div>
-
           </div>
         </div>
         </div>
