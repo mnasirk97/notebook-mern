@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router'
 import api from '../lib/axios'
 import toast from 'react-hot-toast'
-import { LoaderIcon } from 'lucide-react'
+import { ArrowLeftIcon, LoaderIcon } from 'lucide-react'
 
 const NoteDetailPage = () => {
   const [note, setNote] = useState(null)
@@ -44,7 +44,13 @@ const NoteDetailPage = () => {
 
   return (
     <div className='min-h-screen bg-base-200'>
-      <div className="container mx-auto px-4 py-8"></div>
+      <div className="container mx-auto px-4 py-8">
+        <div className='flex items-center justify-between mb-6'>
+          <Link to="/" className="btn btn-ghost">
+              <ArrowLeftIcon className="mr-2" />
+          </Link>
+        </div>
+      </div>
     </div>
   )
 }
