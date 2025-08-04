@@ -31,7 +31,8 @@ const NoteDetailPage = () => {
     fetchNote()
   }, [id])
 
-  console.log("Note =>", {note})
+  // console.log("Note =>", {note})
+  const handleDelete = async () => {}
 
   if (loading) {
     return (
