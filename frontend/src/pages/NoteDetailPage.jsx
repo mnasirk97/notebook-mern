@@ -41,7 +41,6 @@ const NoteDetailPage = () => {
     );
   }
 
-  // ====> 03:01:00
 
   return (
     <div>
