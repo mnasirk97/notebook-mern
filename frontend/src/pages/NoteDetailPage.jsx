@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router'
 import api from '../lib/axios'
 import toast from 'react-hot-toast'
-import { ArrowLeftIcon, LoaderIcon } from 'lucide-react'
+import { ArrowLeftIcon, LoaderIcon, TrashIcon } from 'lucide-react'
 
 const NoteDetailPage = () => {
   const [note, setNote] = useState(null)
@@ -50,6 +50,10 @@ const NoteDetailPage = () => {
               <ArrowLeftIcon className="h-5 w-5" />
               Back to Notes
           </Link>
+          <button onClick={handleDelete} className="btn btn-error btn-outline">
+            <TrashIcon className="h-5 w-5" />
+            Delete Note
+          </button>
         </div>
       </div>
     </div>
