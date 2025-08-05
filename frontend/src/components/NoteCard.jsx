@@ -48,6 +48,3 @@ function NoteCard({ note, setNotes }) {
 }
 
 export default NoteCard
-
-
-
