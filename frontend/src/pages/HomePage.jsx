@@ -36,35 +36,6 @@ function HomePage() {
 }, [])
 
 
-
-  // useEffect(() => {
-  //   const fetchNotes = async () => {
-  //     try {
-  //       // const res = await fetch('http://localhost:5000/api/notes')
-  //       // const data = await res.json()
-  //       const res = await axios.get('http://localhost:5000/api/notes')
-  //       console.log("Date =>", res.data)
-  //       setNotes(res.data)
-  //       setIsRateLimited(false)
-  //     } catch (error) {
-  //       console.log('Failed to fetch notes:', error)
-  //       // if(error.response && error.response.status === 429) {
-  //       if(error.response?.status == 429) {
-  //         // If the error is a rate limit error, set the rate limit state
-  //         setIsRateLimited(true)
-  //       }else{
-  //         toast.error('Failed to fetch notes. Please try again later.')
-  //       }
-  //     }finally{
-  //         // setIsRateLimited(false)
-  //         setLoading(false)
-  //       }
-  //   }
-  //   fetchNotes()
-  // }, [])
-
-  
-
   // ===> Testing
   // useEffect(() => {
   //   const fetchNotes = async () => {
