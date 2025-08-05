@@ -44,7 +44,26 @@ const NoteDetailPage = () => {
       console.error("Error deleting note:", error)
     }
   }
-  const handleSave = async () => {}
+  const handleSave = async () => {
+    if (!note.title.trim() || !note.content.trim()) {
+      toast.error('Please add a title and content to your note.')
+      return;
+    }
+
+    setSaving(true)
+    try {
+      await api.put(`/notes/${id}`, note)
+      toast.success('Note updated successfully.')
+      navigate('/')
+    } catch (error) {
+      console.error("Error saving note:", error)
+      toast.error('Failed to save note. Please try again later.')
+      // Optionally, you can set the note state back to the original state if needed
+      // setNote(originalNoteState);
+    } finally{
+      setSaving(false)
+    }
+  }
 
 
   if (loading) {
