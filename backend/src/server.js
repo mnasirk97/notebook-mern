@@ -2,6 +2,7 @@
 import express from 'express';  // module js
 import dotenv from 'dotenv'; // Importing dotenv to manage environment variables
 import cors from 'cors'; // Importing CORS to handle cross-origin requests
+import path from "path";
 
 import notesRoutes from './routes/notesRoutes.js'; // Importing the notes routes
 import { connectDB } from './config/db.js';
@@ -11,11 +12,19 @@ dotenv.config(); // Load environment variables from .env file
  
 const app = express();
 const PORT = process.env.PORT || 3000;
+const __dirname = path.resolve();
 
 //==> middleware 
-app.use(cors({
-  origin: 'http://localhost:5173', // Allow requests from this origin
-}))
+if (process.env.NODE_ENV !== "production") {
+  app.use(
+    cors({
+      origin: "http://localhost:5173",
+    })
+  );
+}
+// app.use(cors({
+//   origin: 'http://localhost:5173', // Allow requests from this origin
+// }))
 app.use(express.json());
 app.use(rateLimiter)
 ;
@@ -27,6 +36,14 @@ app.use(rateLimiter)
 // })
 
 app.use('/api/notes', notesRoutes); // Mounting the notes routes
+
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static(path.join(__dirname, "../frontend/dist")));
+
+  app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "../frontend", "dist", "index.html"));
+  });
+}
 
 
 connectDB().then(()=> {
