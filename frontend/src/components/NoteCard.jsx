@@ -15,8 +15,6 @@ function NoteCard({ note, setNotes }) {
          await api.delete(`/notes/${id}`)
          toast.success('Note deleted successfully')
           setNotes((prevNotes) => prevNotes.filter((note) => note._id !== id))
-          // console.log("Note in NoteCard deleted Section =>", setNotes)
-          // console.log("Note in NoteCard deleted Section =>", prevNotes)
       } catch (error) {
         console.log("Error deleting note:", error)
         toast.error('Failed to delete note')
