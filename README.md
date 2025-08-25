@@ -23,5 +23,3 @@ A modern and responsive **MERN stack** application for managing personal notes w
 * **Others:** Upstash Redis, REST API
 
 ---
-
-## 📂 Project Structure  
